@@ -17,3 +17,8 @@ Feature: User wants to create a blog
     And I choose blog category
     And I click create blog button
     Then blog is created successfully
+    When I choose the first blog
+    Then blog settings page is opened
+    When I click delete blog button
+    And I click confirm delete button
+    Then blog is deleted successfully
