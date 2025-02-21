@@ -5,9 +5,18 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 import pages.SignUpPage;
+import utils.ConfigReader;
 
 public class SignUpPageSteps {
 	SignUpPage signUpPage = new SignUpPage();
+	
+	public SignUpPageSteps() {
+		try {
+			ConfigReader.loadConfig(); // Load config when step definition class is initialized
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to load config", e);
+		}
+	}
 	
 	@Then("SignUp form is displayed")
 	public void signUpPageIsDisplayed() {

@@ -11,7 +11,7 @@ out/
 allure-results/
 target/
 
-
+config.json
 
 # BlueJ files
 *.ctxt
