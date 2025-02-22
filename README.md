@@ -59,7 +59,7 @@ of the website work as expected and maintain high quality.
 ## 🌱 Future Enhancements ##
 
 - **Expand Automation Flow**:  
-  Add more tests to automate other features of the app, such as adding products to the cart or navigating between different pages.
+  Add more tests to automate other features of the website, such as adding products to the cart or navigating between different pages.
 
 - **Error Handling**:  
   Improve error handling by adding assertions and better logging to track the execution flow.
