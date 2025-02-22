@@ -63,3 +63,8 @@ of the website work as expected and maintain high quality.
 
 - **Error Handling**:  
   Improve error handling by adding assertions and better logging to track the execution flow.
+
+
+## 📣 Feedback and Contributions ##
+
+Feel free to open issues or submit pull requests for bug fixes, improvements, or new features. Contributions are welcome!
