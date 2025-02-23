@@ -87,6 +87,10 @@ Users who wish to run the tests, create a `config.json` file inside the `resourc
 
 ```
 
+## 👥 Contributors
+
+Special thanks to [@Iamyouandwhatiseeisme](https://github.com/Iamyouandwhatiseeisme) for contributions to this project!
+
 ---
 ## 🌱 Future Enhancements ##
 
