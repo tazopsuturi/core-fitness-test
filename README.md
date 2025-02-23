@@ -3,8 +3,7 @@
 ## 📌 Project Overview ##
 
 This is a Test Automation Framework built using: Java, Selenium (Aquality), Cucumber, and TestNG.  
-The project automates testing for the https://corefitness.vercel.app/en-US/login functionality, ensuring that all features  
-of the website work as expected and maintain high quality.  
+The project automates testing for the https://corefitness.vercel.app/en-US/login functionality, ensuring that all features of the website work as expected and maintain high quality.  
 
 
 ---

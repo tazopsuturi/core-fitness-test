@@ -6,7 +6,6 @@ import aquality.selenium.forms.Form;
 import org.openqa.selenium.By;
 import utils.ConfigReader;
 
-import java.io.IOException;
 
 public class CreateBlogFormPage extends Form {
 	public static ConfigReader.Config config;
