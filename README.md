@@ -82,7 +82,7 @@ Users who wish to run the tests, create a `config.json` file inside the `resourc
     "email": "your-email@example.com",
     "password": "your-password"
   },
-  "url": "https://your-test-website.com"
+  "url": "https://corefitness.vercel.app/en-US/login"
 }
 
 ```
