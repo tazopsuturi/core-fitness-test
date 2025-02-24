@@ -1,10 +1,6 @@
 Feature: User wants to create a blog
 
   Scenario: As a user I want to successfully create a blog
-    When I fill email field
-    And I fill password field
-    And I click login button
-    Then Main page is displayed
     When I click menu arrow button
     And I click blog category
     Then blog page is opened

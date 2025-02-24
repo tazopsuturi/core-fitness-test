@@ -23,4 +23,9 @@ public class MainPageSteps {
 	public void clickBlogCategory() {
 		mainPage.clickBlogCategory();
 	}
+	
+	@And("I click product category")
+	public void clickProductsCategory() {
+		mainPage.clickProductsCategory();
+	}
 }
