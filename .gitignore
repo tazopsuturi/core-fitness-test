@@ -20,6 +20,8 @@ config.json
 .mtj.tmp/
 
 Test-Automation.iml
+firstFile.jpg
+secondFile.jpg
 
 # Package Files #
 *.jar
