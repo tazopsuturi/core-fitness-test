@@ -81,7 +81,13 @@ Users who wish to run the tests, create a `config.json` file inside the `resourc
     "email": "your-email@example.com",
     "password": "your-password"
   },
-  "url": "https://corefitness.vercel.app/en-US/login"
+  "blog": {
+    "enTitle": "Test Blog EN",
+    "kaTitle": "ტესტი ბლოგი",
+    "enDescription": "English content",
+    "kaDescription": "ქართული კონტენტი",
+    "category": "Tech"
+  }
 }
 
 ```
