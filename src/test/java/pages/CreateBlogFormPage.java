@@ -4,11 +4,8 @@ import aquality.selenium.elements.interfaces.IButton;
 import aquality.selenium.elements.interfaces.ILabel;
 import aquality.selenium.forms.Form;
 import org.openqa.selenium.By;
-import utils.ConfigReader;
-
 
 public class CreateBlogFormPage extends Form {
-	public static ConfigReader.Config config;
 	private final ILabel engTitleField = getElementFactory().getLabel(By.id("title"), "En Title Field");
 	private final ILabel kaTitleField = getElementFactory().getLabel(By.id("title_ka"), "Ka Title Field");
 	private final ILabel engDescriptionField = getElementFactory().getLabel(By.id("description"), "En Description Field");

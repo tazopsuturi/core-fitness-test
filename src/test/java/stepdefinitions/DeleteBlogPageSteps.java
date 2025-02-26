@@ -3,7 +3,6 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.Assert;
 import pages.DeleteBlogPage;
 
 public class DeleteBlogPageSteps {
@@ -23,5 +22,5 @@ public class DeleteBlogPageSteps {
 	public void clickConfirmDeleteButton() {
 		deleteBlogPage.clickConfirmDeleteButton();
 	}
-
+	
 }

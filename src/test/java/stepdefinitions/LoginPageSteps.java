@@ -7,7 +7,6 @@ import org.testng.Assert;
 import pages.LoginPage;
 import utils.ConfigReader;
 
-
 public class LoginPageSteps {
 	LoginPage loginPage = new LoginPage();
 	

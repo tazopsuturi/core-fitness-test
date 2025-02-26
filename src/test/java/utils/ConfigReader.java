@@ -1,7 +1,6 @@
 package utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.cucumber.java.sl.In;
 
 import java.io.File;
 import java.io.IOException;

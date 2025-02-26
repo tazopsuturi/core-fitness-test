@@ -14,7 +14,7 @@ public class AddProductFormPageSteps {
 	}
 	
 	@And("I enter product title\\(ka)")
-	public void enterProductTitleKa(){
+	public void enterProductTitleKa() {
 		addProductFormPage.fillProductTitleKa();
 	}
 	

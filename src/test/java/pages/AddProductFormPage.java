@@ -7,7 +7,6 @@ import org.openqa.selenium.By;
 import utils.ConfigReader;
 import constants.Constants;
 
-
 public class AddProductFormPage extends Form {
 	private final ILabel productTitleEn = getElementFactory().getLabel(By.id("name"), "Product title En");
 	private final ILabel productTitleKa = getElementFactory().getLabel(By.id("name-georgian"), "Product title Ka");
