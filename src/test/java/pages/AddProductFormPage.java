@@ -5,10 +5,10 @@ import aquality.selenium.elements.interfaces.ILabel;
 import aquality.selenium.forms.Form;
 import org.openqa.selenium.By;
 import utils.ConfigReader;
+import constants.Constants;
+
 
 public class AddProductFormPage extends Form {
-	private final String FILE1_DIR = System.getProperty("user.dir") + "/src/test/resources/firstFile.jpg";
-	private final String FILE2_DIR = System.getProperty("user.dir") + "/src/test/resources/secondFile.jpg";
 	private final ILabel productTitleEn = getElementFactory().getLabel(By.id("name"), "Product title En");
 	private final ILabel productTitleKa = getElementFactory().getLabel(By.id("name-georgian"), "Product title Ka");
 	private final ILabel productDescriptionEn = getElementFactory().getLabel(By.cssSelector("[data-cy='description-input-field']"), "product description En");
@@ -49,11 +49,11 @@ public class AddProductFormPage extends Form {
 	}
 	
 	public void setChooseFile1() {
-		chooseFile.sendKeys(FILE1_DIR);
+		chooseFile.sendKeys(Constants.FILE1_DIR);
 	}
 	
 	public void setChooseFile2() {
-		chooseFile2.sendKeys(FILE2_DIR);
+		chooseFile2.sendKeys(Constants.FILE2_DIR);
 	}
 	
 	public void clickCreateProduct() {
