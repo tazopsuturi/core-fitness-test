@@ -1,6 +1,8 @@
 package utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.cucumber.java.sl.In;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -33,9 +35,19 @@ public class ConfigReader {
 		public String category;
 	}
 	
+	public static class Product {
+		public String enTitle;
+		public String kaTitle;
+		public String enDescription;
+		public String kaDescription;
+		public String price;
+		public String category;
+	}
+	
 	public static class Config {
 		public User user;
 		public Blog blog;
+		public Product product;
 	}
 	
 }
