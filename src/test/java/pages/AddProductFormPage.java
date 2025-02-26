@@ -4,6 +4,7 @@ import aquality.selenium.elements.interfaces.IButton;
 import aquality.selenium.elements.interfaces.ILabel;
 import aquality.selenium.forms.Form;
 import org.openqa.selenium.By;
+import utils.ConfigReader;
 
 public class AddProductFormPage extends Form {
 	private final String FILE1_DIR = System.getProperty("user.dir") + "/src/test/resources/firstFile.jpg";
@@ -24,27 +25,27 @@ public class AddProductFormPage extends Form {
 	}
 	
 	public void fillProductTitleEn() {
-		productTitleEn.sendKeys("Test");
+		productTitleEn.sendKeys(ConfigReader.config.product.enTitle);
 	}
 	
 	public void fillProductTitleKa() {
-		productTitleKa.sendKeys("ტესტ");
+		productTitleKa.sendKeys(ConfigReader.config.product.kaTitle);
 	}
 	
 	public void fillDescriptionEn() {
-		productDescriptionEn.sendKeys("TestTest");
+		productDescriptionEn.sendKeys(ConfigReader.config.product.enDescription);
 	}
 	
 	public void fillDescriptionKa() {
-		productDescriptionKa.sendKeys("ტესტტესტ");
+		productDescriptionKa.sendKeys(ConfigReader.config.product.kaDescription);
 	}
 	
 	public void enterPrice() {
-		productPrice.sendKeys(String.valueOf(Integer.parseInt("12")));
+		productPrice.sendKeys(String.valueOf(ConfigReader.config.product.price));
 	}
 	
 	public void chooseCategory() {
-		productCategory.sendKeys("tesetCategory");
+		productCategory.sendKeys(ConfigReader.config.product.category);
 	}
 	
 	public void setChooseFile1() {

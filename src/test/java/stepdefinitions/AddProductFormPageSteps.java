@@ -25,7 +25,7 @@ public class AddProductFormPageSteps {
 	
 	@And("I enter product description\\(ka)")
 	public void enterProductDescriptionKa() {
-		addProductFormPage.fillProductTitleKa();
+		addProductFormPage.fillDescriptionKa();
 	}
 	
 	@And("I enter product price")
@@ -38,9 +38,23 @@ public class AddProductFormPageSteps {
 		addProductFormPage.chooseCategory();
 	}
 	
+	@And("I choose file1")
+	public void chooseFile1() {
+		addProductFormPage.setChooseFile1();
+	}
+	
+	@And("I choose file2")
+	public void chooseFile2() {
+		addProductFormPage.setChooseFile2();
+	}
+	
 	@And("I press create product button")
 	public void pressCreateProductButton() {
 		addProductFormPage.clickCreateProduct();
 	}
 	
+	@Then("Product is created")
+	public void isProductCreated() {
+		Assert.assertTrue(addProductFormPage.state().waitForNotDisplayed(), "Product is not created");
+	}
 }

@@ -17,9 +17,5 @@ public class ProductsPageSteps {
 	public void clickAddProduct(){
 		productsPage.clickAddProductButton();
 	}
-	
-	@Then("Product is created")
-	public void isProductCreated() {
-		Assert.assertTrue(productsPage.state().waitForDisplayed(), "Product is not created");
-	}
+
 }

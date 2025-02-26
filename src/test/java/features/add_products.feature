@@ -13,5 +13,7 @@ Feature: Create product
     And I enter product description(ka)
     And I enter product price
     And I choose product category
+    And I choose file1
+    And I choose file2
     And I press create product button
     Then Product is created
