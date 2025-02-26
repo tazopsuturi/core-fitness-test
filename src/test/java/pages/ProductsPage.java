@@ -10,4 +10,8 @@ public class ProductsPage extends Form {
 	public ProductsPage() {
 		super(By.cssSelector("[data-cy='add-product-button']"), "Products Page");
 	}
+	
+	public void clickAddProductButton() {
+		addProduct.click();
+	}
 }
