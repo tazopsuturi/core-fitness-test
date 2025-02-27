@@ -11,7 +11,7 @@ public class ProductsPageSteps {
 	
 	@When("User goes to Product page")
 	public void isProductPageDisplayed() {
-		Assert.assertTrue(productsPage.state().waitForNotDisplayed(), "Product page is not displayed");
+		Assert.assertTrue(productsPage.state().waitForDisplayed(), "Product page is not displayed");
 	}
 	
 	@Then("products page is displayed")
