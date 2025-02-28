@@ -13,6 +13,7 @@ public class DeleteProductPage extends Form {
 	}
 	
 	public void clickDeleteProductButton() {
+		deleteProduct.state().waitForDisplayed();
 		deleteProduct.click();
 	}
 	

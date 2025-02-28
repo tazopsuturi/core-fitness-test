@@ -4,7 +4,7 @@ Feature: Create product
   Scenario: As a user, I want to add products to cart
     When I click menu arrow button
     And I click product category
-    Then products page is displayed
+    Then User goes to Product page
     When I click add product button
     And I enter product title(en)
     And I enter product title(ka)

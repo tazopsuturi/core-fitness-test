@@ -13,11 +13,7 @@ public class ProductsPageSteps {
 	public void isProductPageDisplayed() {
 		Assert.assertTrue(productsPage.state().waitForDisplayed(), "Product page is not displayed");
 	}
-	
-	@Then("products page is displayed")
-	public void productsPageIsDisplayed() {
-		Assert.assertTrue(productsPage.state().waitForDisplayed(), "Products page is not displayed");
-	}
+
 	
 	@When("I click add product button")
 	public void clickAddProduct(){
