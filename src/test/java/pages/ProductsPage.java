@@ -10,7 +10,7 @@ import java.time.Duration;
 import java.util.List;
 
 public class ProductsPage extends Form {
-	private static final By PRODUCT_LOCATOR = By.xpath("//div[@class=\"flex flex-col items-center rounded-lg shadow-lg w-full sm:w-80 bg-white dark:bg-gray-800 overflow-hidden group duration-100 ease-in-out transition-transform transform hover:scale-105\"]");
+	private static final By product = By.xpath("//div[@class=\"flex flex-col items-center rounded-lg shadow-lg w-full sm:w-80 bg-white dark:bg-gray-800 overflow-hidden group duration-100 ease-in-out transition-transform transform hover:scale-105\"]");
 	private final IButton addProduct = getElementFactory().getButton(By.cssSelector("[data-cy='add-product-button']"), "Add Product Button");
 	
 	public ProductsPage() {
@@ -21,13 +21,13 @@ public class ProductsPage extends Form {
 		addProduct.click();
 	}
 	
-	public void selectProductsWithTestName() {
+	public void selectProductsToDelete() {
 		AqualityServices.getConditionalWait().waitFor(
-				() -> !getElementFactory().findElements(PRODUCT_LOCATOR, ILabel.class).isEmpty(),
+				() -> !getElementFactory().findElements(product, ILabel.class).isEmpty(),
 				Duration.ofSeconds(10)
 		);
 		
-		List<ILabel> products = getElementFactory().findElements(PRODUCT_LOCATOR, ILabel.class);
+		List<ILabel> products = getElementFactory().findElements(product, ILabel.class);
 		AqualityServices.getLogger().info("Total products found: " + products.size());
 		
 		for (ILabel product : products) {

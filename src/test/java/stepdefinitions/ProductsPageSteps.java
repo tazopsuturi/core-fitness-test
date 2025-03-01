@@ -19,6 +19,6 @@ public class ProductsPageSteps {
 	
 	@When("I choose product")
 	public void chooseProductToDelete() {
-		productsPage.selectProductsWithTestName();
+		productsPage.selectProductsToDelete();
 	}
 }
