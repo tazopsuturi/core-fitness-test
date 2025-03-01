@@ -1,4 +1,36 @@
 package pages;
 
-public class ShoppingCartPage {
+import aquality.selenium.elements.interfaces.IButton;
+import aquality.selenium.elements.interfaces.ILabel;
+import aquality.selenium.forms.Form;
+import org.openqa.selenium.By;
+
+public class ShoppingCartPage extends Form {
+	private final ILabel productPrice = getElementFactory().getLabel(By.xpath("//div[@class='text-xl font-bold']"), "Price Label");
+	private final ILabel emptyCartMsg = getElementFactory().getLabel(By.xpath("//div[@class='text-center text-gray-500 py-8']"), "Empty Cart Message");
+	private final IButton clearCart = getElementFactory().getButton
+			(By.xpath("//button[contains(@class, 'inline-flex') and contains(@class, 'rounded-md') and contains(@class, 'hover:bg-red-50')]"), "Clear Cart Button");
+	private final IButton checkoutNow = getElementFactory().getButton
+			(By.xpath("//button[contains(@class, 'inline-flex') and contains(@class, 'rounded-md') and contains(@class, 'bg-green-600')]"), "Checkout Now Button");
+	
+	public ShoppingCartPage() {
+		super(By.xpath("//h2[@class='tracking-tight text-2xl font-bold']"), "Shopping Cart Page");
+	}
+	
+	public void getPrice() {
+		String priceText = productPrice.getText().split("\\$")[0].trim();
+		Double price = Double.parseDouble(priceText);
+	}
+	
+	public boolean isEmptyCartMessage() {
+		return emptyCartMsg.state().isDisplayed();
+	}
+	
+	public void clickClearCart() {
+		clearCart.click();
+	}
+	
+	public void clickCheckoutNow() {
+		checkoutNow.click();
+	}
 }
