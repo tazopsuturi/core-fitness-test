@@ -14,8 +14,12 @@ public class DeleteProductPageSteps {
 	}
 	
 	@And("I click delete product button")
-	public void clickDeleteButton() throws InterruptedException {
-		deleteProductPage.clickDeleteProductButton();
+	public void clickDeleteButton() {
+		if (!deleteProductPage.isDeleteButtonDisplayed()) {
+			Assert.fail("You do not have the permission to delete this product");
+		} else {
+			deleteProductPage.clickDeleteProductButton();
+		}
 	}
 	
 	@And("I click confirm delete product button")

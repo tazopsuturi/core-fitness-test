@@ -5,15 +5,18 @@ import aquality.selenium.forms.Form;
 import org.openqa.selenium.By;
 
 public class DeleteProductPage extends Form {
-	private final IButton deleteProduct = getElementFactory().getButton(By.cssSelector("data-cy[='delete-button']"), "delete product");
-	private final IButton confirmDeleteProduct = getElementFactory().getButton(By.cssSelector("data-cy[='confirm-delete-button']"), "confirm delete");
+	private final IButton deleteProduct = getElementFactory().getButton(By.xpath("//button[@data-cy='delete-button']"), "delete product");
+	private final IButton confirmDeleteProduct = getElementFactory().getButton(By.xpath("//button[@data-cy='confirm-delete-button']"), "confirm delete");
 	
 	public DeleteProductPage() {
-		super(By.cssSelector("data-cy[='delete-button']"), "delete button");
+		super(By.xpath("//button[@data-cy='add-to-cart-button-Test Blog EN']"), "delete button");
 	}
 	
-	public void clickDeleteProductButton() throws InterruptedException {
-		Thread.sleep(2000);
+	public boolean isDeleteButtonDisplayed() {
+		return deleteProduct.state().waitForDisplayed();
+	}
+	
+	public void clickDeleteProductButton() {
 		deleteProduct.state().waitForDisplayed();
 		deleteProduct.click();
 	}
@@ -22,5 +25,4 @@ public class DeleteProductPage extends Form {
 		confirmDeleteProduct.state().waitForDisplayed();
 		confirmDeleteProduct.click();
 	}
-	
 }
