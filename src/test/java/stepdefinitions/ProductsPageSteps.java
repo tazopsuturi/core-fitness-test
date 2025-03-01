@@ -11,7 +11,6 @@ public class ProductsPageSteps {
 	public void isProductPageDisplayed() {
 		Assert.assertTrue(productsPage.state().waitForDisplayed(), "Product page is not displayed");
 	}
-
 	
 	@When("I click add product button")
 	public void clickAddProduct(){
@@ -22,5 +21,4 @@ public class ProductsPageSteps {
 	public void chooseProductToDelete() {
 		productsPage.selectProductsWithTestName();
 	}
-
 }

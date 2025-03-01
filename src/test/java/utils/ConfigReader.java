@@ -48,5 +48,4 @@ public class ConfigReader {
 		public Blog blog;
 		public Product product;
 	}
-	
 }

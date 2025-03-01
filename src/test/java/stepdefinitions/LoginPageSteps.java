@@ -38,7 +38,6 @@ public class LoginPageSteps {
 		loginPage.fillPasswordField(ConfigReader.config.user.password);
 	}
 	
-	
 	@When("I click login button")
 	public void clickLoginButton() {
 		loginPage.clickLoginButton();

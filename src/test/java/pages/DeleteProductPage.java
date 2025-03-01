@@ -12,7 +12,8 @@ public class DeleteProductPage extends Form {
 		super(By.cssSelector("data-cy[='delete-button']"), "delete button");
 	}
 	
-	public void clickDeleteProductButton() {
+	public void clickDeleteProductButton() throws InterruptedException {
+		Thread.sleep(2000);
 		deleteProduct.state().waitForDisplayed();
 		deleteProduct.click();
 	}
