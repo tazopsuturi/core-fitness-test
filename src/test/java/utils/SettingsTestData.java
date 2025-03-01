@@ -33,4 +33,5 @@ public class SettingsTestData {
 			AqualityServices.getLogger().error("Settings file %s not found or incorrect. Error msg: %s".formatted(filePath, e));
 			throw new RuntimeException(e);
 		}
-	}}
+	}
+}

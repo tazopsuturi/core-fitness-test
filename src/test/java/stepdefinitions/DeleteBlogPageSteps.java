@@ -22,5 +22,4 @@ public class DeleteBlogPageSteps {
 	public void clickConfirmDeleteButton() {
 		deleteBlogPage.clickConfirmDeleteButton();
 	}
-	
 }

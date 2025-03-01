@@ -18,7 +18,6 @@ public class AddProductFormPage extends Form {
 	private final ILabel chooseFile2 = getElementFactory().getLabel(By.id("file2"), "choose file2");
 	private final IButton createProduct = getElementFactory().getButton(By.cssSelector("[data-cy='create-product-button']"), "create product button");
 	
-	
 	public AddProductFormPage() {
 		super(By.cssSelector("[data-cy='create-product-button']"), "Create product");
 	}

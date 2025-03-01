@@ -13,7 +13,6 @@ public class CreateBlogFormPage extends Form {
 	private final ILabel categoryField = getElementFactory().getLabel(By.id("category"), "Category Field");
 	private final IButton createBlog = getElementFactory().getButton(By.cssSelector("[data-cy='create-product-button']"), "Create Blog");
 	
-	
 	public CreateBlogFormPage() {
 		super(By.cssSelector("[data-cy='create-product-button']"), "Create Blog Page");
 	}
