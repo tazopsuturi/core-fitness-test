@@ -21,4 +21,9 @@ public class ProductsPageSteps {
 	public void chooseProductToDelete() {
 		productsPage.selectProductsToDelete();
 	}
+	
+	@When("I click add to cart button")
+	public void clickAddToCart() {
+		productsPage.clickAddToCart();
+	}
 }

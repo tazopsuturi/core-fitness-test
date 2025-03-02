@@ -14,6 +14,7 @@ import java.util.List;
 public class ProductsPage extends Form {
 	private static final By product = By.xpath("//div[@class='flex flex-col items-center rounded-lg shadow-lg w-full sm:w-80 bg-white dark:bg-gray-800 overflow-hidden group duration-100 ease-in-out transition-transform transform hover:scale-105']");
 	private final IButton addProduct = getElementFactory().getButton(By.cssSelector("[data-cy='add-product-button']"), "Add Product Button");
+	private final By addToCart = By.xpath("//button[contains(@class, 'w-full') and contains(@class, 'py-2 bg')]");
 	
 	public ProductsPage() {
 		super(By.cssSelector("[data-cy='add-product-button']"), "Products Page");
@@ -23,11 +24,15 @@ public class ProductsPage extends Form {
 		addProduct.click();
 	}
 	
-	public void selectProductsToDelete() {
+	public void waitForProducts() {
 		AqualityServices.getConditionalWait().waitFor(
 				() -> !getElementFactory().findElements(product, ILabel.class).isEmpty(),
 				Duration.ofSeconds(SettingsTestData.getEnvData().getWait())
 		);
+	}
+	
+	public void selectProductsToDelete() {
+		waitForProducts();
 		
 		List<ILabel> products = getElementFactory().findElements(product, ILabel.class);
 		
@@ -46,6 +51,30 @@ public class ProductsPage extends Form {
 			if (titleText.contains(ConfigReader.config.product.enTitle)) {
 				AqualityServices.getConditionalWait().waitFor(() -> viewButton.state().isDisplayed() && viewButton.state().isClickable(), Duration.ofSeconds(10));
 				viewButton.click();
+				break;
+			}
+		}
+	}
+	
+	public void clickAddToCart() {
+		waitForProducts();
+		
+		List<ILabel> products = getElementFactory().findElements(product, ILabel.class);
+		
+		int count = 0;
+		for (ILabel product : products) {
+			
+			IButton addProductToCart = product.findChildElement
+					(By.xpath("//button[contains(@class, 'w-full') and contains(@class, 'py-2 bg')]"), IButton.class);
+			
+			AqualityServices.getConditionalWait().waitFor(()
+					-> addProductToCart.state().isDisplayed()
+					&& addProductToCart.state().isClickable(), Duration.ofSeconds(SettingsTestData.getEnvData().getWait()));
+			
+			if (count < 3) {
+				count++;
+				addProductToCart.click();
+			}else {
 				break;
 			}
 		}
