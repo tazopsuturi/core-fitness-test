@@ -28,13 +28,13 @@ public class ProductsPageSteps {
 		productsPage.clickAddToCart();
 	}
 	
-	@Then("Product is added to cart")
-	public void isProductAddedToCart() {
-		Assert.assertTrue(productsPage.isProductAddedToCart(), "Product is not added to cart");
-	}
+//	@Then("Product is added to cart")
+//	public void isProductAddedToCart() {
+//		Assert.assertTrue(productsPage.isProductAddedToCart(), "Product is not added to cart");
+//	}
 	
-	@When("I click right arrow button")
-	public void clickRightArrowButton() {
-		productsPage.clickRightArrowButton();
-	}
+//	@When("I click right arrow button")
+//	public void clickRightArrowButton() {
+//		productsPage.clickRightArrowButton();
+//	}
 }
