@@ -8,4 +8,5 @@ Feature: User wants to add multiple products to cart and then check it
     Then Product is added to cart
     When I click right arrow button
     And I click view cart button
-#    Then I check the products in the cart and total price
+    Then Shopping cart page is displayed
+
