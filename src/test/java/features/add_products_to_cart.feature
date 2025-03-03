@@ -9,4 +9,5 @@ Feature: User wants to add multiple products to cart and then check it
     When I click right arrow button
     And I click view cart button
     Then Shopping cart page is displayed
-
+    When I press clear cart button
+    Then Cart is cleared
