@@ -14,18 +14,4 @@ public class MainPageSteps {
 		Assert.assertTrue(mainPage.state().waitForDisplayed(), "Main page is not displayed");
 	}
 	
-	@When("I click menu arrow button")
-	public void clickArrowButton() {
-		mainPage.clickArrowButton();
-	}
-	
-	@And("I click blog category")
-	public void clickBlogCategory() {
-		mainPage.clickBlogCategory();
-	}
-	
-	@And("I click product category")
-	public void clickProductsCategory() {
-		mainPage.clickProductsCategory();
-	}
 }

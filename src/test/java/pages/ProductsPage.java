@@ -14,10 +14,14 @@ import java.util.List;
 public class ProductsPage extends Form {
 	private static final By product = By.xpath("//div[@class='flex flex-col items-center rounded-lg shadow-lg w-full sm:w-80 bg-white dark:bg-gray-800 overflow-hidden group duration-100 ease-in-out transition-transform transform hover:scale-105']");
 	private final IButton addProduct = getElementFactory().getButton(By.cssSelector("[data-cy='add-product-button']"), "Add Product Button");
-	private final By addToCart = By.xpath("//button[contains(@class, 'w-full') and contains(@class, 'py-2 bg')]");
+	private final ILabel productAddedAlert = getElementFactory().getLabel(By.xpath("//section[@aria-label='Notifications alt+T' and @aria-live='polite']"), "Product Added Alert");
 	
 	public ProductsPage() {
 		super(By.cssSelector("[data-cy='add-product-button']"), "Products Page");
+	}
+	
+	public boolean isProductAdded() {
+		return productAddedAlert.state().waitForDisplayed();
 	}
 	
 	public void clickAddProductButton() {
