@@ -21,4 +21,9 @@ public class LeftArrowMenuSteps {
 	public void clickProductsCategory() {
 		leftArrowMenu.clickProductsCategory();
 	}
+	
+	@And("I click profile button")
+	public void clickProfileCategory() {
+		leftArrowMenu.clickProfileCategory();
+	}
 }
