@@ -9,6 +9,7 @@ public class LeftArrowMenu extends Form {
 	private final ILabel arrowButton = getElementFactory().getLabel(By.xpath("//div[contains(@class, 'fixed items-center') and contains(@class, 'w-20 h-16 bg-transparent ')]"), "Arrow Button", ElementState.EXISTS_IN_ANY_STATE);
 	private final ILabel blogCategory = getElementFactory().getLabel(By.xpath("//a[@href='/en-US/blogs']"), "Blog Category");
 	private final ILabel productsCategory = getElementFactory().getLabel(By.xpath("//a[@href='/en-US/products']"), "Products Category");
+	private final ILabel profileCategory = getElementFactory().getLabel(By.xpath("//a[@href='/en-US/profile']"), "Profile Category");
 	
 	public LeftArrowMenu() {
 		super(By.xpath("//a[@href='/en-US/blogs']"), "Blog Category");
@@ -24,5 +25,9 @@ public class LeftArrowMenu extends Form {
 	
 	public void clickProductsCategory() {
 		productsCategory.click();
+	}
+	
+	public void clickProfileCategory() {
+		profileCategory.click();
 	}
 }
