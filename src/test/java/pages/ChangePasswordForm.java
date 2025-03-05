@@ -36,5 +36,4 @@ public class ChangePasswordForm extends Form {
 	public void clickChangePassword() {
 		changePassword.click();
 	}
-	
 }

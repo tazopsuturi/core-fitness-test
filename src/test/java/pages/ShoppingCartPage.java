@@ -23,8 +23,4 @@ public class ShoppingCartPage extends Form {
 	public void clickClearCart() {
 		clearCart.click();
 	}
-	
-	public void clickCheckoutNow() {
-		checkoutNow.click();
-	}
 }

@@ -27,5 +27,4 @@ public class ProfilePageSteps {
 	public void clickProfilePictureField() {
 		profilePage.clickSetProfilePicture();
 	}
-	
 }

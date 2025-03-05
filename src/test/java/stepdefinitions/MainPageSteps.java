@@ -11,5 +11,4 @@ public class MainPageSteps {
 	public void mainPageIsDisplayed() {
 		Assert.assertTrue(mainPage.state().waitForDisplayed(), "Main page is not displayed");
 	}
-	
 }

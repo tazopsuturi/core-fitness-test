@@ -40,5 +40,4 @@ public class CreateBlogFormPage extends Form {
 	public void clickCreateBlogButton() {
 		createBlog.click();
 	}
-	
 }

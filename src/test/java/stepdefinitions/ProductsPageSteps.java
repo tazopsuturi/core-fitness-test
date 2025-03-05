@@ -32,5 +32,4 @@ public class ProductsPageSteps {
 	public void isProductAddedToCart() {
 		Assert.assertTrue(productsPage.isProductAdded(), "Product is not added to cart");
 	}
-	
 }

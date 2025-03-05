@@ -25,5 +25,4 @@ public class ChangePasswordFormSteps {
 	public void clickChangePasswordButton() {
 		changePasswordForm.clickChangePassword();
 	}
-
 }

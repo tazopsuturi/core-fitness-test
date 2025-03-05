@@ -15,7 +15,6 @@ public class ProfilePage extends Form {
 	private final ILabel changePassword = getElementFactory().getLabel(By.xpath("//div[contains(@class, 'underline cursor-pointer')]"), "Change Password");
 	private final ILabel profilePictureImg = getElementFactory().getLabel(By.xpath("//img[@class='rounded-2xl h-full object-cover']"), "Profile Picture", ElementState.EXISTS_IN_ANY_STATE);
 	private final ILabel inputProfileImg = getElementFactory().getLabel(By.xpath("//input[@style='display: none;']"), "Input Profile Picture", ElementState.EXISTS_IN_ANY_STATE);
-	private final IButton deleteProfile = getElementFactory().getButton(By.xpath("//button[contains(@class, 'bg-red-500')]"), "Delete Profile");
 	private final IButton subscribe = getElementFactory().getButton(By.xpath("//button[contains(@class, 'rounded-2xl') and contains(@class, 'bg-white')]"), "Subscribe");
 	
 	public ProfilePage() {
