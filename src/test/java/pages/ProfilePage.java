@@ -31,9 +31,7 @@ public class ProfilePage extends Form {
 	}
 	
 	public void clickSetProfilePicture() {
-		//inputProfileImg.click();
 		inputProfileImg.sendKeys(Constants.PROFILE_PICTURE);
 		AqualityServices.getConditionalWait().waitFor(() -> profilePictureImg.state().isClickable(), Duration.ofSeconds(SettingsTestData.getEnvData().getWait()));
-		
 	}
 }

@@ -1,7 +1,6 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.When;
 import pages.ChangePasswordForm;
 
 public class ChangePasswordFormSteps {
@@ -17,7 +16,7 @@ public class ChangePasswordFormSteps {
 		changePasswordForm.enterNewPassword();
 	}
 	
-	@And("User confirms new password")
+	@And("User enters confirm password")
 	public void enterConfirmPassword() {
 		changePasswordForm.enterConfirmPassword();
 	}

@@ -1,5 +1,6 @@
 package pages;
 
+import aquality.selenium.core.elements.ElementState;
 import aquality.selenium.elements.interfaces.IButton;
 import aquality.selenium.elements.interfaces.ILabel;
 import aquality.selenium.forms.Form;
@@ -10,7 +11,7 @@ public class ChangePasswordForm extends Form {
 	private final String newPasswordText = "Pass12345";
 	private final ILabel currentPassword = getElementFactory().getLabel(By.xpath("//input[@class='border rounded p-2 bg-white w-[250px]']"), "Current Password");
 	private final ILabel newPassword = getElementFactory().getLabel(By.xpath("//input[@placeholder='New Password']"), "New Password");
-	private final ILabel confirmPassword = getElementFactory().getLabel(By.xpath("//input[@placeholder='Confirm Password']"), "Confirm Password");
+	private final ILabel confirmPassword = getElementFactory().getLabel(By.xpath("//input[@placeholder='Confirm Password']"), "Confirm Password", ElementState.EXISTS_IN_ANY_STATE);
 	private final IButton changePassword = getElementFactory().getButton(By.xpath("//button[contains(@class, 'font-medium')]"), "Change Password");
 	
 	public ChangePasswordForm() {
@@ -23,12 +24,12 @@ public class ChangePasswordForm extends Form {
 	}
 	
 	public void enterNewPassword() {
-		newPassword.state().waitForDisplayed();
+		newPassword.state().waitForClickable();
 		newPassword.sendKeys(newPasswordText);
 	}
 	
 	public void enterConfirmPassword() {
-		confirmPassword.state().waitForDisplayed();
+		confirmPassword.state().waitForClickable();
 		confirmPassword.sendKeys(newPasswordText);
 	}
 	
