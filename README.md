@@ -87,6 +87,14 @@ Users who wish to run the tests, create a `config.json` file inside the `resourc
     "enDescription": "English content",
     "kaDescription": "ქართული კონტენტი",
     "category": "Tech"
+  },
+  "product": {
+    "enTitle": "Test",
+    "kaTitle": "ტესტი",
+    "enDescription": "English content",
+    "kaDescription": "ქართული კონტენტი",
+    "price": 1200,
+    "category": "TestProd"
   }
 }
 
