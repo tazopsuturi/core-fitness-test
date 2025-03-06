@@ -8,3 +8,4 @@ Feature: Sign Up feature
     And I fill password field
     And I confirm my password
     And I click register button
+    Then User is registered successfully

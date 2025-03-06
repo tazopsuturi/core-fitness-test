@@ -31,4 +31,11 @@ public class SignUpPageSteps {
 	public void clickRegisterButton() {
 		signUpPage.clickSignInButton();
 	}
+	
+	@Then("User is registered successfully")
+	public void userRegisteredSuccessfully() {
+		if(signUpPage.isPasswordsDoNotMatchMsgDisplayed()) {
+			Assert.fail("Passwords do not match. Try again!");
+		}
+	}
 }
