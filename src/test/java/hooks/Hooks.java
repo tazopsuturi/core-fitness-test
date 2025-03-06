@@ -2,6 +2,8 @@ package hooks;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import org.testng.Assert;
+import pages.LoginHelper;
 import pages.LoginPage;
 import utils.ConfigReader;
 import utils.SettingsTestData;
@@ -15,12 +17,14 @@ public class Hooks {
 		getBrowser().maximize();
 		getBrowser().goTo(SettingsTestData.getEnvData().getHost());
 		
-		LoginPage loginPage = new LoginPage();
 		
-		if (loginPage.state().waitForDisplayed()) {
-			loginPage.fillEmailField(ConfigReader.config.user.email);
-			loginPage.fillPasswordField(ConfigReader.config.user.password);
-			loginPage.clickLoginButton();
+		boolean isSuccess = LoginHelper.login(
+				ConfigReader.config.user.email,
+				ConfigReader.config.user.password
+		);
+		
+		if (!isSuccess) {
+			Assert.fail("Login failed. Wrong email or password.");
 		}
 		
 	}
