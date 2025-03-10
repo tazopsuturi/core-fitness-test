@@ -20,6 +20,9 @@ public class ProfilePage extends Form {
 	private final ITextBox displayName = getElementFactory().getTextBox(By.xpath("//input[@fdprocessedid='v4irs']"), "Display Name");
 	private final IButton updateDisplayName = getElementFactory().getButton(By.xpath("//button[@fdprocessedid='w971z8']"), "Update Display Name");
 	private final IButton subscribe = getElementFactory().getButton(By.xpath("//button[contains(@class, 'rounded-2xl') and contains(@class, 'bg-white')]"), "Subscribe");
+	private final IButton deleteProfile = getElementFactory().getButton(By.xpath("//button[contains(@class, 'rounded-lg h-10')]"), "Delete Profile");
+	private final IButton confirmDeleteProfile = getElementFactory().getButton(By.xpath("//button[contains(@class, 'px-4 py-2 bg-red-500')]"), "Confirm Delete Profile");
+	
 	
 	public ProfilePage() {
 		super(By.xpath("//button[contains(@class, 'bg-red-500')]"), "Delete Profile");
@@ -46,5 +49,13 @@ public class ProfilePage extends Form {
 	
 	public void clickUpdateDisplayName() {
 		updateDisplayName.click();
+	}
+	
+	public void clickDelete() {
+		deleteProfile.click();
+	}
+	
+	public void clickConfirmDelete() {
+		confirmDeleteProfile.click();
 	}
 }

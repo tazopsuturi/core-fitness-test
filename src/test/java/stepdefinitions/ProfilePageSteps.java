@@ -1,9 +1,11 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
+import pages.MainPage;
 import pages.ProfilePage;
 import utils.ConfigReader;
 
@@ -45,5 +47,20 @@ public class ProfilePageSteps {
 		String profileName = profilePage.setDisplayName();
 		
 		Assert.assertTrue(ConfigReader.config.user.email.contains(profileName), "Display name is not updated");
+	}
+	
+	@When("User presses delete account button")
+	public void clickDeleteAccountButton() {
+		profilePage.clickDelete();
+	}
+	
+	@When("User confirms deletion")
+	public void confirmDeletion() {
+		profilePage.clickConfirmDelete();
+	}
+	
+	@Then("User account is deleted")
+	public void accountIsDeleted() {
+		Assert.assertTrue(profilePage.state().waitForNotDisplayed(), "User account is not deleted");
 	}
 }
