@@ -4,7 +4,6 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.testng.Assert;
 import pages.LoginHelper;
-import pages.LoginPage;
 import utils.ConfigReader;
 import utils.SettingsTestData;
 
@@ -17,7 +16,6 @@ public class Hooks {
 		getBrowser().maximize();
 		getBrowser().goTo(SettingsTestData.getEnvData().getHost());
 		
-		
 		boolean isSuccess = LoginHelper.login(
 				ConfigReader.config.user.email,
 				ConfigReader.config.user.password
@@ -26,7 +24,6 @@ public class Hooks {
 		if (!isSuccess) {
 			Assert.fail("Login failed. Wrong email or password.");
 		}
-		
 	}
 	
 	@After

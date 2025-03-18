@@ -1,6 +1,5 @@
 package models;
 
-
 import lombok.Getter;
 
 @Getter

@@ -9,4 +9,3 @@ Feature: User wants to change password
     And User enters new password
     And User enters confirm password
     And User clicks change password button
-#    Then User sees password changed message
